@@ -10,7 +10,10 @@ public class LineComparison {
                 
                 please Enter the co-ordinates of points\s
                  """);
-            line();
+            double line1 = line();
+            double line2 = line();
+            comparison(line1, line2);
+
         }
 
         public static double line(){
@@ -26,6 +29,16 @@ public class LineComparison {
             double length = Math.sqrt(Math.pow((x2-x1), 2) + Math.pow((y2-y1), 2) );
             System.out.println("length of line : " +length);
             return length;
+
+        }
+        public static void comparison(double x, double y){
+
+            boolean a = Objects.equals(x, y);
+            if(a==true){
+                System.out.println("Lengths of both lines are same");
+            }else{
+                System.out.println("Lengths of both lines are different");
+            }
 
         }
     }
