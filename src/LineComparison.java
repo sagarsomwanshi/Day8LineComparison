@@ -1,6 +1,7 @@
 
 import java.util.Objects;
 import java.util.Scanner;
+
 public class LineComparison {
 
         public static void main(String[] args) {
@@ -33,11 +34,16 @@ public class LineComparison {
         }
         public static void comparison(double x, double y){
 
-            boolean a = Objects.equals(x, y);
-            if(a==true){
+            Double length1 = new Double(x);
+            Double length2 = new Double(y);
+
+            int a = length1.compareTo(length2);
+            if(a==0){
                 System.out.println("Lengths of both lines are same");
+            }else if(a>0){
+                System.out.println("Line 1 is greater");
             }else{
-                System.out.println("Lengths of both lines are different");
+                System.out.println("Line 2 is greater");
             }
 
         }
